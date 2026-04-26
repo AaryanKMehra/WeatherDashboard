@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; color: #333; display: flex; justify-content: center; padding: 50px; }
+        .card { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 300px; text-align: center; }
+        .temp { font-size: 3rem; font-weight: bold; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="card" id="weather-card">
+        <h2 id="location">Boston</h2>
+        <div id="loading">Loading...</div>
+        <div id="content" style="display:none;">
+            <p id="description">Current Weather</p>
+            <div class="temp"><span id="temp-value">--</span>°C</div>
+            <p>Humidity: <span id="humidity">--</span>%</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
