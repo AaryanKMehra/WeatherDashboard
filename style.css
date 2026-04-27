@@ -1,0 +1,46 @@
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: #f0f0f0;
+    color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.dashboard {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+header h1 { margin: 0; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+
+.current-weather {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#current-icon { font-size: 4rem; margin-bottom: 10px; }
+.temp-display { font-size: 3.5rem; font-weight: 700; }
+
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.forecast-card {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.forecast-card i { font-size: 1.5rem; margin: 10px 0; }
+.forecast-temp { font-weight: bold; font-size: 0.9rem; }

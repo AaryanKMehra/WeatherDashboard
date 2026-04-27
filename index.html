@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
-    <style>
-        body { font-family: sans-serif; background: #f4f4f4; color: #333; display: flex; justify-content: center; padding: 50px; }
-        .card { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 300px; text-align: center; }
-        .temp { font-size: 3rem; font-weight: bold; margin: 10px 0; }
-    </style>
+    <title>Weather Dashboard | Iteration 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card" id="weather-card">
-        <h2 id="location">Boston</h2>
-        <div id="loading">Loading...</div>
-        <div id="content" style="display:none;">
-            <p id="description">Current Weather</p>
-            <div class="temp"><span id="temp-value">--</span>°C</div>
-            <p>Humidity: <span id="humidity">--</span>%</p>
-        </div>
+    <div class="dashboard">
+        <header>
+            <h1 id="city-name">Boston, MA</h1>
+            <p id="date-today"></p>
+        </header>
+
+        <section class="current-weather">
+            <div class="main-info">
+                <i id="current-icon" class="fas fa-cloud"></i>
+                <div class="temp-display">
+                    <span id="current-temp">--</span>°C
+                </div>
+                <p id="weather-desc">Loading...</p>
+            </div>
+            <div class="details">
+                <p>Humidity: <span id="humidity">--</span>%</p>
+                <p>Wind: <span id="wind">--</span> km/h</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="forecast-container" id="forecast-list">
+            </section>
     </div>
     <script src="app.js"></script>
 </body>
