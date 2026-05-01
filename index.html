@@ -3,35 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard | Iteration 2</title>
+    <title>Weather Dashboard | Final</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="dashboard">
         <header>
-            <h1 id="city-name">Boston, MA</h1>
-            <p id="date-today"></p>
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Search city (e.g. Madrid)...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <h1 id="city-name">Loading...</h1>
         </header>
 
+        <div id="error-message" class="error" style="display:none;">City not found. Please try again.</div>
+
         <section class="current-weather">
-            <div class="main-info">
-                <i id="current-icon" class="fas fa-cloud"></i>
-                <div class="temp-display">
-                    <span id="current-temp">--</span>°C
+            <div id="loading-spinner">Fetching weather...</div>
+            <div id="weather-content" style="visibility: hidden;">
+                <i id="current-icon" class="fas"></i>
+                <div class="temp-display"><span id="current-temp">--</span>°C</div>
+                <p id="weather-desc">--</p>
+                <div class="details">
+                    <span><i class="fas fa-droplet"></i> <span id="humidity">--</span>%</span>
+                    <span><i class="fas fa-wind"></i> <span id="wind">--</span> km/h</span>
                 </div>
-                <p id="weather-desc">Loading...</p>
-            </div>
-            <div class="details">
-                <p>Humidity: <span id="humidity">--</span>%</p>
-                <p>Wind: <span id="wind">--</span> km/h</p>
             </div>
         </section>
 
-        <hr>
-
-        <section class="forecast-container" id="forecast-list">
-            </section>
+        <section class="forecast-container" id="forecast-list"></section>
     </div>
     <script src="app.js"></script>
 </body>
